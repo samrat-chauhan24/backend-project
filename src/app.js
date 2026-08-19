@@ -21,4 +21,12 @@ app.use(cookieParser())
 // middlewares are the logics used between request and response to check some condition before sending the response
 // app.get('/',(req, res) => {} ), but we also have (err, req, res, next)
 
+//routes
+import userRouter from './routes/user.routes.js';
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
+// http://localhost:8000/api/v1/users/register
+
 export { app }  
